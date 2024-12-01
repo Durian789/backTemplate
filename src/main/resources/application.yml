@@ -1,0 +1,16 @@
+server:
+  port: 9999
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo?useSSL=false&serverTimezone=UTC
+    username: root
+    password: HJX0711
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+logging:
+  level:
+    root: INFO
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
