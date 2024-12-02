@@ -1,0 +1,1705 @@
+{
+    "topicName": "__consumer_offsets",
+    "partitions": [
+        {
+            "id": 0,
+            "replicas": [
+                1,
+                0,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 630,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 0,
+                    "size": 15195
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 0,
+                    "size": 15195
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 0,
+                    "size": 15195
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "replicas": [
+                2,
+                0,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 4300,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 10,
+                    "size": 14061
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 10,
+                    "size": 14061
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 10,
+                    "size": 14061
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "replicas": [
+                0,
+                2,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 1806,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 20,
+                    "size": 13080
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 20,
+                    "size": 13080
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 20,
+                    "size": 13080
+                }
+            ]
+        },
+        {
+            "id": 40,
+            "replicas": [
+                2,
+                0,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 11658,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 40,
+                    "size": 12838
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 40,
+                    "size": 12838
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 40,
+                    "size": 12838
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "replicas": [
+                1,
+                0,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 593,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 30,
+                    "size": 13882
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 30,
+                    "size": 13882
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 30,
+                    "size": 13882
+                }
+            ]
+        },
+        {
+            "id": 39,
+            "replicas": [
+                1,
+                2,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                0,
+                1
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 128486,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 39,
+                    "size": 13002
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 39,
+                    "size": 13002
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 39,
+                    "size": 13002
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "replicas": [
+                1,
+                2,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 568,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 9,
+                    "size": 18156
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 9,
+                    "size": 18156
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 9,
+                    "size": 18156
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "replicas": [
+                0,
+                1,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 1043,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 11,
+                    "size": 32988
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 11,
+                    "size": 32988
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 11,
+                    "size": 32988
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "replicas": [
+                2,
+                1,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 544,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 31,
+                    "size": 19051
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 31,
+                    "size": 19051
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 31,
+                    "size": 19051
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "replicas": [
+                2,
+                1,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 394,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 13,
+                    "size": 13037
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 13,
+                    "size": 13037
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 13,
+                    "size": 13037
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "replicas": [
+                1,
+                0,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 1186,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 18,
+                    "size": 20079
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 18,
+                    "size": 20079
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 18,
+                    "size": 20079
+                }
+            ]
+        },
+        {
+            "id": 22,
+            "replicas": [
+                2,
+                0,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 584,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 22,
+                    "size": 13121
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 22,
+                    "size": 13121
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 22,
+                    "size": 13121
+                }
+            ]
+        },
+        {
+            "id": 32,
+            "replicas": [
+                0,
+                2,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 2149,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 32,
+                    "size": 15404
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 32,
+                    "size": 15404
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 32,
+                    "size": 15404
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "replicas": [
+                0,
+                2,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 1380,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 8,
+                    "size": 28509
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 8,
+                    "size": 28509
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 8,
+                    "size": 28509
+                }
+            ]
+        },
+        {
+            "id": 43,
+            "replicas": [
+                2,
+                1,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 1851,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 43,
+                    "size": 16575
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 43,
+                    "size": 16575
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 43,
+                    "size": 16575
+                }
+            ]
+        },
+        {
+            "id": 29,
+            "replicas": [
+                0,
+                1,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 137311,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 29,
+                    "size": 2243836
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 29,
+                    "size": 2243836
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 29,
+                    "size": 2243836
+                }
+            ]
+        },
+        {
+            "id": 34,
+            "replicas": [
+                2,
+                0,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 1396325,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 34,
+                    "size": 22295
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 34,
+                    "size": 22295
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 34,
+                    "size": 22295
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "replicas": [
+                2,
+                1,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 850,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 1,
+                    "size": 13300
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 1,
+                    "size": 13300
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 1,
+                    "size": 13300
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "replicas": [
+                1,
+                0,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 620,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 6,
+                    "size": 23592
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 6,
+                    "size": 23592
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 6,
+                    "size": 23592
+                }
+            ]
+        },
+        {
+            "id": 41,
+            "replicas": [
+                0,
+                1,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 6936,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 41,
+                    "size": 27957
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 41,
+                    "size": 27957
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 41,
+                    "size": 27957
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "replicas": [
+                1,
+                2,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 589,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 27,
+                    "size": 21985
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 27,
+                    "size": 21985
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 27,
+                    "size": 21985
+                }
+            ]
+        },
+        {
+            "id": 48,
+            "replicas": [
+                1,
+                0,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 378,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 48,
+                    "size": 14316
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 48,
+                    "size": 14316
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 48,
+                    "size": 14316
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "replicas": [
+                0,
+                1,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 300,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 5,
+                    "size": 9747
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 5,
+                    "size": 9747
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 5,
+                    "size": 9747
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "replicas": [
+                1,
+                2,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 539,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 15,
+                    "size": 11910
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 15,
+                    "size": 11910
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 15,
+                    "size": 11910
+                }
+            ]
+        },
+        {
+            "id": 35,
+            "replicas": [
+                0,
+                1,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 1095,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 35,
+                    "size": 15734
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 35,
+                    "size": 15734
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 35,
+                    "size": 11918
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "replicas": [
+                2,
+                1,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 495,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 25,
+                    "size": 17239
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 25,
+                    "size": 17239
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 25,
+                    "size": 17239
+                }
+            ]
+        },
+        {
+            "id": 46,
+            "replicas": [
+                2,
+                0,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 356373,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 46,
+                    "size": 31114
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 46,
+                    "size": 31114
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 46,
+                    "size": 31114
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "replicas": [
+                0,
+                2,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                0,
+                1
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 514,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 26,
+                    "size": 21219
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 26,
+                    "size": 21219
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 26,
+                    "size": 21219
+                }
+            ]
+        },
+        {
+            "id": 36,
+            "replicas": [
+                1,
+                0,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 27328,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 36,
+                    "size": 18109
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 36,
+                    "size": 18109
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 36,
+                    "size": 18109
+                }
+            ]
+        },
+        {
+            "id": 44,
+            "replicas": [
+                0,
+                2,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 143960,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 44,
+                    "size": 27579
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 44,
+                    "size": 27579
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 44,
+                    "size": 27579
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "replicas": [
+                2,
+                0,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 50382,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 16,
+                    "size": 9754
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 16,
+                    "size": 9754
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 16,
+                    "size": 9754
+                }
+            ]
+        },
+        {
+            "id": 37,
+            "replicas": [
+                2,
+                1,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 1015620,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 37,
+                    "size": 14028
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 37,
+                    "size": 14028
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 37,
+                    "size": 14028
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "replicas": [
+                0,
+                1,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 542,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 17,
+                    "size": 19168
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 17,
+                    "size": 19168
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 17,
+                    "size": 19168
+                }
+            ]
+        },
+        {
+            "id": 45,
+            "replicas": [
+                1,
+                2,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 4548,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 45,
+                    "size": 25463
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 45,
+                    "size": 25463
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 45,
+                    "size": 25463
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "replicas": [
+                1,
+                2,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 2982,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 3,
+                    "size": 10800
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 3,
+                    "size": 10800
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 3,
+                    "size": 10800
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "replicas": [
+                2,
+                0,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 34400,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 4,
+                    "size": 15791
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 4,
+                    "size": 15791
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 4,
+                    "size": 15791
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "replicas": [
+                1,
+                0,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 531,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 24,
+                    "size": 19399
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 24,
+                    "size": 19399
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 24,
+                    "size": 19399
+                }
+            ]
+        },
+        {
+            "id": 38,
+            "replicas": [
+                0,
+                2,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 707,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 38,
+                    "size": 27689
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 38,
+                    "size": 27689
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 38,
+                    "size": 27689
+                }
+            ]
+        },
+        {
+            "id": 33,
+            "replicas": [
+                1,
+                2,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 487,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 33,
+                    "size": 17330
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 33,
+                    "size": 17330
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 33,
+                    "size": 17330
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "replicas": [
+                0,
+                1,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                0,
+                1
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 446,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 23,
+                    "size": 18733
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 23,
+                    "size": 18733
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 23,
+                    "size": 18733
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "replicas": [
+                2,
+                0,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 573,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 28,
+                    "size": 22656
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 28,
+                    "size": 22656
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 28,
+                    "size": 22656
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "replicas": [
+                0,
+                2,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 602,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 2,
+                    "size": 14659
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 2,
+                    "size": 14659
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 2,
+                    "size": 14659
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "replicas": [
+                1,
+                0,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 555,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 12,
+                    "size": 16054
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 12,
+                    "size": 16054
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 12,
+                    "size": 16054
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "replicas": [
+                2,
+                1,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 471,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 19,
+                    "size": 19055
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 19,
+                    "size": 19055
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 19,
+                    "size": 19055
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "replicas": [
+                0,
+                2,
+                1
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 11247,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 14,
+                    "size": 19651
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 14,
+                    "size": 19651
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 14,
+                    "size": 19651
+                }
+            ]
+        },
+        {
+            "id": 47,
+            "replicas": [
+                0,
+                1,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 0,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 1328095,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 47,
+                    "size": 25244
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 47,
+                    "size": 25244
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 47,
+                    "size": 25244
+                }
+            ]
+        },
+        {
+            "id": 49,
+            "replicas": [
+                2,
+                1,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 49498,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 49,
+                    "size": 14324
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 49,
+                    "size": 14324
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 49,
+                    "size": 14324
+                }
+            ]
+        },
+        {
+            "id": 42,
+            "replicas": [
+                1,
+                0,
+                2
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                0,
+                1
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 241256,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 42,
+                    "size": 21456
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 42,
+                    "size": 21456
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 42,
+                    "size": 21456
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "replicas": [
+                2,
+                1,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                0,
+                1,
+                2
+            ],
+            "leader": 2,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 440,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 7,
+                    "size": 12206
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 7,
+                    "size": 12206
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 7,
+                    "size": 12206
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "replicas": [
+                1,
+                2,
+                0
+            ],
+            "offlineReplicas": null,
+            "inSyncReplicas": [
+                2,
+                1,
+                0
+            ],
+            "leader": 1,
+            "waterMarkLow": 0,
+            "waterMarkHigh": 43861,
+            "partitionLogDirs": [
+                {
+                    "brokerId": 0,
+                    "partitionId": 21,
+                    "size": 26314
+                },
+                {
+                    "brokerId": 1,
+                    "partitionId": 21,
+                    "size": 26314
+                },
+                {
+                    "brokerId": 2,
+                    "partitionId": 21,
+                    "size": 26314
+                }
+            ]
+        }
+    ]
+}

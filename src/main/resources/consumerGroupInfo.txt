@@ -1,0 +1,1246 @@
+{
+    "consumerGroups": [
+        {
+            "groupId": "01c09168-3a34-488b-99ad-63c28aaff5fb",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 1,
+            "topicOffsets": [
+                {
+                    "topic": "CRM.CDC_TEST.S_OPTY_XM",
+                    "summedLag": 14844042,
+                    "partitionCount": 15,
+                    "partitionsWithOffset": 15,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 11,
+                            "groupOffset": 0,
+                            "highWaterMark": 989514,
+                            "lag": 989514
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 0,
+                            "highWaterMark": 991041,
+                            "lag": 991041
+                        },
+                        {
+                            "partitionId": 6,
+                            "groupOffset": 0,
+                            "highWaterMark": 990540,
+                            "lag": 990540
+                        },
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 0,
+                            "highWaterMark": 987775,
+                            "lag": 987775
+                        },
+                        {
+                            "partitionId": 5,
+                            "groupOffset": 0,
+                            "highWaterMark": 988964,
+                            "lag": 988964
+                        },
+                        {
+                            "partitionId": 10,
+                            "groupOffset": 0,
+                            "highWaterMark": 990598,
+                            "lag": 990598
+                        },
+                        {
+                            "partitionId": 8,
+                            "groupOffset": 0,
+                            "highWaterMark": 989651,
+                            "lag": 989651
+                        },
+                        {
+                            "partitionId": 9,
+                            "groupOffset": 0,
+                            "highWaterMark": 987962,
+                            "lag": 987962
+                        },
+                        {
+                            "partitionId": 13,
+                            "groupOffset": 0,
+                            "highWaterMark": 991349,
+                            "lag": 991349
+                        },
+                        {
+                            "partitionId": 12,
+                            "groupOffset": 0,
+                            "highWaterMark": 991003,
+                            "lag": 991003
+                        },
+                        {
+                            "partitionId": 14,
+                            "groupOffset": 0,
+                            "highWaterMark": 987971,
+                            "lag": 987971
+                        },
+                        {
+                            "partitionId": 4,
+                            "groupOffset": 0,
+                            "highWaterMark": 990066,
+                            "lag": 990066
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 1,
+                            "highWaterMark": 988470,
+                            "lag": 988469
+                        },
+                        {
+                            "partitionId": 7,
+                            "groupOffset": 0,
+                            "highWaterMark": 988561,
+                            "lag": 988561
+                        },
+                        {
+                            "partitionId": 3,
+                            "groupOffset": 0,
+                            "highWaterMark": 990578,
+                            "lag": 990578
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "08b0deb0-59e0-48f3-97db-d66f7559260e",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 2,
+            "topicOffsets": [
+                {
+                    "topic": "CRMCDC15.CDC_TEST.S_BU",
+                    "summedLag": 0,
+                    "partitionCount": 3,
+                    "partitionsWithOffset": 3,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 31,
+                            "highWaterMark": 31,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "494c1c02-3db3-4ca9-a6ca-c8fe80c37053",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 2,
+            "topicOffsets": [
+                {
+                    "topic": "my2kafka2",
+                    "summedLag": 0,
+                    "partitionCount": 1,
+                    "partitionsWithOffset": 1,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "4e51c071-b861-46a8-bd1b-ea4e867d323c",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 1,
+            "topicOffsets": [
+                {
+                    "topic": "tes222",
+                    "summedLag": 0,
+                    "partitionCount": 1,
+                    "partitionsWithOffset": 1,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "555ac34e-8d4c-4b94-9082-1c98e305f3cd",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 0,
+            "topicOffsets": [
+                {
+                    "topic": "CRMCDC1.CDC_TEST.S_OPTY_XM",
+                    "summedLag": 0,
+                    "partitionCount": 3,
+                    "partitionsWithOffset": 3,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 18899947,
+                            "highWaterMark": 18899947,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 18897315,
+                            "highWaterMark": 18897315,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 18907077,
+                            "highWaterMark": 18907077,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "6eed5a37-4dfb-446f-97ae-11c935f6aa5f",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 2,
+            "topicOffsets": [
+                {
+                    "topic": "CRMCDC14",
+                    "summedLag": 0,
+                    "partitionCount": 3,
+                    "partitionsWithOffset": 3,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 90,
+                            "highWaterMark": 90,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "6fd45fcb-7b65-408b-82c7-d0acf5bb09f0",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 1,
+            "topicOffsets": [
+                {
+                    "topic": "CRMCDC10",
+                    "summedLag": 0,
+                    "partitionCount": 3,
+                    "partitionsWithOffset": 3,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 46,
+                            "highWaterMark": 46,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "703aa454-abb9-4776-8673-0a9789a3e111",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 1,
+            "topicOffsets": [
+                {
+                    "topic": "flink_test",
+                    "summedLag": 0,
+                    "partitionCount": 3,
+                    "partitionsWithOffset": 3,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 1,
+                            "highWaterMark": 1,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 1,
+                            "highWaterMark": 1,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 1,
+                            "highWaterMark": 1,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "724a8d01-a7fe-49e8-8a9a-869511cac7ba",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 1,
+            "topicOffsets": [
+                {
+                    "topic": "kafka_table",
+                    "summedLag": 0,
+                    "partitionCount": 1,
+                    "partitionsWithOffset": 1,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "a3fbc9d1-f962-46bd-897c-0d303daeee05",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 0,
+            "topicOffsets": [
+                {
+                    "topic": "CRMCDC1.CDC_TEST.S_OPTY_XM",
+                    "summedLag": 0,
+                    "partitionCount": 3,
+                    "partitionsWithOffset": 3,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 18907077,
+                            "highWaterMark": 18907077,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 18899947,
+                            "highWaterMark": 18899947,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 18897315,
+                            "highWaterMark": 18897315,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "a5b565a3-54c1-4455-9468-e449908bb82b",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 2,
+            "topicOffsets": [
+                {
+                    "topic": "my2kafka2",
+                    "summedLag": 0,
+                    "partitionCount": 1,
+                    "partitionsWithOffset": 1,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "ac2a56f7-2e32-4598-88ad-c3353a9c180d",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 1,
+            "topicOffsets": [
+                {
+                    "topic": "CRMCDC13.CDC_TEST.S_BU",
+                    "summedLag": 0,
+                    "partitionCount": 3,
+                    "partitionsWithOffset": 3,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 5,
+                            "highWaterMark": 5,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 61,
+                            "highWaterMark": 61,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "b6252805-6294-4d60-a5cf-608704599184",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 1,
+            "topicOffsets": [
+                {
+                    "topic": "CRM.CDC_TEST.S_OPTY_XM",
+                    "summedLag": 14844042,
+                    "partitionCount": 15,
+                    "partitionsWithOffset": 15,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 14,
+                            "groupOffset": 0,
+                            "highWaterMark": 987971,
+                            "lag": 987971
+                        },
+                        {
+                            "partitionId": 4,
+                            "groupOffset": 0,
+                            "highWaterMark": 990066,
+                            "lag": 990066
+                        },
+                        {
+                            "partitionId": 13,
+                            "groupOffset": 0,
+                            "highWaterMark": 991349,
+                            "lag": 991349
+                        },
+                        {
+                            "partitionId": 12,
+                            "groupOffset": 0,
+                            "highWaterMark": 991003,
+                            "lag": 991003
+                        },
+                        {
+                            "partitionId": 3,
+                            "groupOffset": 0,
+                            "highWaterMark": 990578,
+                            "lag": 990578
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 1,
+                            "highWaterMark": 988470,
+                            "lag": 988469
+                        },
+                        {
+                            "partitionId": 7,
+                            "groupOffset": 0,
+                            "highWaterMark": 988561,
+                            "lag": 988561
+                        },
+                        {
+                            "partitionId": 6,
+                            "groupOffset": 0,
+                            "highWaterMark": 990540,
+                            "lag": 990540
+                        },
+                        {
+                            "partitionId": 11,
+                            "groupOffset": 0,
+                            "highWaterMark": 989514,
+                            "lag": 989514
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 0,
+                            "highWaterMark": 991041,
+                            "lag": 991041
+                        },
+                        {
+                            "partitionId": 10,
+                            "groupOffset": 0,
+                            "highWaterMark": 990598,
+                            "lag": 990598
+                        },
+                        {
+                            "partitionId": 8,
+                            "groupOffset": 0,
+                            "highWaterMark": 989651,
+                            "lag": 989651
+                        },
+                        {
+                            "partitionId": 9,
+                            "groupOffset": 0,
+                            "highWaterMark": 987962,
+                            "lag": 987962
+                        },
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 0,
+                            "highWaterMark": 987775,
+                            "lag": 987775
+                        },
+                        {
+                            "partitionId": 5,
+                            "groupOffset": 0,
+                            "highWaterMark": 988964,
+                            "lag": 988964
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "b6a8ac5e-ad6d-4dcc-9ed6-fd8c5a38e26b",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 2,
+            "topicOffsets": [
+                {
+                    "topic": "tt.tt01",
+                    "summedLag": 0,
+                    "partitionCount": 1,
+                    "partitionsWithOffset": 1,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "bd_deb05",
+            "state": "Empty",
+            "protocolType": "",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 0,
+            "topicOffsets": [
+                {
+                    "topic": "CRM.CDC_TEST.S_OPTY_XM",
+                    "summedLag": 14660580,
+                    "partitionCount": 15,
+                    "partitionsWithOffset": 15,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 11,
+                            "groupOffset": 16259,
+                            "highWaterMark": 989514,
+                            "lag": 973255
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 7825,
+                            "highWaterMark": 991041,
+                            "lag": 983216
+                        },
+                        {
+                            "partitionId": 6,
+                            "groupOffset": 14525,
+                            "highWaterMark": 990540,
+                            "lag": 976015
+                        },
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 11050,
+                            "highWaterMark": 987775,
+                            "lag": 976725
+                        },
+                        {
+                            "partitionId": 5,
+                            "groupOffset": 13133,
+                            "highWaterMark": 988964,
+                            "lag": 975831
+                        },
+                        {
+                            "partitionId": 10,
+                            "groupOffset": 13585,
+                            "highWaterMark": 990598,
+                            "lag": 977013
+                        },
+                        {
+                            "partitionId": 8,
+                            "groupOffset": 13006,
+                            "highWaterMark": 989651,
+                            "lag": 976645
+                        },
+                        {
+                            "partitionId": 9,
+                            "groupOffset": 14508,
+                            "highWaterMark": 987962,
+                            "lag": 973454
+                        },
+                        {
+                            "partitionId": 13,
+                            "groupOffset": 9750,
+                            "highWaterMark": 991349,
+                            "lag": 981599
+                        },
+                        {
+                            "partitionId": 12,
+                            "groupOffset": 8125,
+                            "highWaterMark": 991003,
+                            "lag": 982878
+                        },
+                        {
+                            "partitionId": 14,
+                            "groupOffset": 9750,
+                            "highWaterMark": 987971,
+                            "lag": 978221
+                        },
+                        {
+                            "partitionId": 4,
+                            "groupOffset": 13591,
+                            "highWaterMark": 990066,
+                            "lag": 976475
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 8385,
+                            "highWaterMark": 988470,
+                            "lag": 980085
+                        },
+                        {
+                            "partitionId": 7,
+                            "groupOffset": 14625,
+                            "highWaterMark": 988561,
+                            "lag": 973936
+                        },
+                        {
+                            "partitionId": 3,
+                            "groupOffset": 15346,
+                            "highWaterMark": 990578,
+                            "lag": 975232
+                        }
+                    ]
+                },
+                {
+                    "topic": "CRMCDC25.CDC_TEST.S_OPTY_XM",
+                    "summedLag": 0,
+                    "partitionCount": 15,
+                    "partitionsWithOffset": 15,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 11,
+                            "groupOffset": 741415,
+                            "highWaterMark": 741415,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 741154,
+                            "highWaterMark": 741154,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 3,
+                            "groupOffset": 741078,
+                            "highWaterMark": 741078,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 741367,
+                            "highWaterMark": 741367,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 10,
+                            "groupOffset": 742805,
+                            "highWaterMark": 742805,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 8,
+                            "groupOffset": 740656,
+                            "highWaterMark": 740656,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 13,
+                            "groupOffset": 742607,
+                            "highWaterMark": 742607,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 14,
+                            "groupOffset": 741106,
+                            "highWaterMark": 741106,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 9,
+                            "groupOffset": 740407,
+                            "highWaterMark": 740407,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 4,
+                            "groupOffset": 741428,
+                            "highWaterMark": 741428,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 6,
+                            "groupOffset": 742064,
+                            "highWaterMark": 742064,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 7,
+                            "groupOffset": 742356,
+                            "highWaterMark": 742356,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 5,
+                            "groupOffset": 741545,
+                            "highWaterMark": 741545,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 741932,
+                            "highWaterMark": 741932,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 12,
+                            "groupOffset": 741012,
+                            "highWaterMark": 741012,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "c55bc77e-433d-46fb-8eb9-f522cb07f3f1",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 2,
+            "topicOffsets": [
+                {
+                    "topic": "CRM.CDC_TEST.S_OPTY_XM",
+                    "summedLag": 14844042,
+                    "partitionCount": 15,
+                    "partitionsWithOffset": 15,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 11,
+                            "groupOffset": 0,
+                            "highWaterMark": 989514,
+                            "lag": 989514
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 0,
+                            "highWaterMark": 991041,
+                            "lag": 991041
+                        },
+                        {
+                            "partitionId": 6,
+                            "groupOffset": 0,
+                            "highWaterMark": 990540,
+                            "lag": 990540
+                        },
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 1,
+                            "highWaterMark": 987775,
+                            "lag": 987774
+                        },
+                        {
+                            "partitionId": 5,
+                            "groupOffset": 0,
+                            "highWaterMark": 988964,
+                            "lag": 988964
+                        },
+                        {
+                            "partitionId": 10,
+                            "groupOffset": 0,
+                            "highWaterMark": 990598,
+                            "lag": 990598
+                        },
+                        {
+                            "partitionId": 8,
+                            "groupOffset": 0,
+                            "highWaterMark": 989651,
+                            "lag": 989651
+                        },
+                        {
+                            "partitionId": 9,
+                            "groupOffset": 0,
+                            "highWaterMark": 987962,
+                            "lag": 987962
+                        },
+                        {
+                            "partitionId": 13,
+                            "groupOffset": 0,
+                            "highWaterMark": 991349,
+                            "lag": 991349
+                        },
+                        {
+                            "partitionId": 12,
+                            "groupOffset": 0,
+                            "highWaterMark": 991003,
+                            "lag": 991003
+                        },
+                        {
+                            "partitionId": 14,
+                            "groupOffset": 0,
+                            "highWaterMark": 987971,
+                            "lag": 987971
+                        },
+                        {
+                            "partitionId": 4,
+                            "groupOffset": 0,
+                            "highWaterMark": 990066,
+                            "lag": 990066
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 0,
+                            "highWaterMark": 988470,
+                            "lag": 988470
+                        },
+                        {
+                            "partitionId": 7,
+                            "groupOffset": 0,
+                            "highWaterMark": 988561,
+                            "lag": 988561
+                        },
+                        {
+                            "partitionId": 3,
+                            "groupOffset": 0,
+                            "highWaterMark": 990578,
+                            "lag": 990578
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "cd803229-7efd-4533-bb9d-99709feda5fa",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 1,
+            "topicOffsets": [
+                {
+                    "topic": "CRM",
+                    "summedLag": 0,
+                    "partitionCount": 3,
+                    "partitionsWithOffset": 3,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 4,
+                            "highWaterMark": 4,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "confluent_dev",
+            "state": "Empty",
+            "protocolType": "connect",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 1,
+            "topicOffsets": [],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "d01de278-7d99-409a-b1c7-f7b3c7e532f0",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 0,
+            "topicOffsets": [
+                {
+                    "topic": "CRMCDC13",
+                    "summedLag": 0,
+                    "partitionCount": 3,
+                    "partitionsWithOffset": 3,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 115,
+                            "highWaterMark": 115,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "db01e83d-23e1-4158-9302-3e5ddf12dd01",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 2,
+            "topicOffsets": [
+                {
+                    "topic": "tmp_base_order_detail",
+                    "summedLag": 0,
+                    "partitionCount": 3,
+                    "partitionsWithOffset": 3,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 352797933,
+                            "highWaterMark": 352797933,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 558605285,
+                            "highWaterMark": 558605285,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 451493795,
+                            "highWaterMark": 451493795,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "ecc37a46-240f-4ee0-b97d-49e90a33bd94",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 0,
+            "topicOffsets": [
+                {
+                    "topic": "CRMCDC13",
+                    "summedLag": 0,
+                    "partitionCount": 3,
+                    "partitionsWithOffset": 3,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 115,
+                            "highWaterMark": 115,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "f3977c0b-b5ba-4a60-881c-0bf05b11c62e",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 0,
+            "topicOffsets": [
+                {
+                    "topic": "flink_test",
+                    "summedLag": 0,
+                    "partitionCount": 3,
+                    "partitionsWithOffset": 3,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 1,
+                            "highWaterMark": 1,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 1,
+                            "highWaterMark": 1,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 1,
+                            "highWaterMark": 1,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "fa2b7133-dbe3-4d1a-9ffe-2190efc987e0",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 1,
+            "topicOffsets": [
+                {
+                    "topic": "CRMCDC1.CDC_TEST.S_BU",
+                    "summedLag": 0,
+                    "partitionCount": 3,
+                    "partitionsWithOffset": 3,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 82,
+                            "highWaterMark": 82,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 2,
+                            "groupOffset": 90,
+                            "highWaterMark": 90,
+                            "lag": 0
+                        },
+                        {
+                            "partitionId": 1,
+                            "groupOffset": 76,
+                            "highWaterMark": 76,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "kafka_user",
+            "state": "Empty",
+            "protocolType": "consumer",
+            "protocol": "",
+            "members": [],
+            "coordinatorId": 1,
+            "topicOffsets": [
+                {
+                    "topic": "all_type_test",
+                    "summedLag": 0,
+                    "partitionCount": 1,
+                    "partitionsWithOffset": 1,
+                    "partitionOffsets": [
+                        {
+                            "partitionId": 0,
+                            "groupOffset": 0,
+                            "highWaterMark": 0,
+                            "lag": 0
+                        }
+                    ]
+                }
+            ],
+            "allowedActions": [
+                "all"
+            ]
+        },
+        {
+            "groupId": "schema-registry",
+            "state": "Stable",
+            "protocolType": "sr",
+            "protocol": "v0",
+            "members": [
+                {
+                    "id": "sr-1-1dfead8e-09a8-48ed-b4b7-2eede11ea856",
+                    "clientId": "sr-1",
+                    "clientHost": "/10.244.3.1",
+                    "assignments": []
+                }
+            ],
+            "coordinatorId": 0,
+            "topicOffsets": [],
+            "allowedActions": [
+                "all"
+            ]
+        }
+    ]
+}
