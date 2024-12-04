@@ -8,5 +8,5 @@ import java.util.Map;
 
 public interface TopicGroupMonitorService {
 
-    void kafkaGroupTopic();
+    void kafkaGroupTopic(String s);
 }

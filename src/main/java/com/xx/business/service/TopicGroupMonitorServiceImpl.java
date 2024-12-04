@@ -19,11 +19,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.time.LocalTime;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Service
 @Slf4j
@@ -36,28 +32,36 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
     @Autowired
     private KafkaTopicConfigMapper kafkaTopicConfigMapper;
 
+    @Autowired
+    private IDimCommAcqRuleService dimCommAcqRuleService;
+    @Autowired
+    private IDimSendRuleService sendRuleService;
+    @Autowired
+    private IDimAlertDataService alertDataService;
+    @Autowired
+    private GeneralAlarmMsgTask generalAlarmMsgTask;
+
     @Override
-    public void kafkaGroupTopic() {
-        //开始时间
-        LocalTime startTime = LocalTime.of(8, 0, 0);
-        //结束时间
-        LocalTime endTime = LocalTime.of(23, 59, 59, 999);
-        //当前时间
-        LocalTime now = LocalTime.now();
-        //检查时间 是否在 08:00:00 - 23:59:59
-        if (!(now.isAfter(startTime) && now.isBefore(endTime))) {
-            log.info("kafkaGroupTopic 当前时间不合符计算逻辑：{}", now);
-            return;
-        }
+    public void kafkaGroupTopic(String s) {
+
+        //下面的 1L 1L 就是随便写的 TODO 类似 DWD_GN_GP_CHECK_DATA_EMAIL_HILINK.getSysId(), DWD_GN_GP_CHECK_DATA_EMAIL_HILINK.getRuleTypeId()
+        DimCommAcqRule dimCommAcqRule = getDimCommAcqRule(4L, 1L);
+        //需要发送预警的ID
+        List<Long> alertDataIdList = new ArrayList<>();
         //去数据库 获取 group和topic的配置信息
         Set<String> allTopicConfig = getAllTopicConfig();
         Set<String> allGroupConfig = getAllGroupConfig();
-
-        //写死配置
         //lag/topicCount 的阈值
         Double ratio = 0.5D;
-        //绝对条目数
-        int maxCount = 10000;
+        try {
+            double tmp = Double.parseDouble(s);
+            //在 (0,1) 区间说明参数合法
+            if (tmp > 0 && tmp < 1) {
+                ratio = tmp;
+            }
+        } catch (Exception e) {
+            log.error("Param ratio isValid:{}, ERROR:", s, e);
+        }
         /* --------------------------- 以上都是配置 ----------------------------*/
 
         //1. 获取 所有消费组 和 topic的关系数据
@@ -66,6 +70,7 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
         JSONObject jsonObject = JSONObject.parseObject(content);
         //获取 consumerGroups json数组
         JSONArray consumerGroups = jsonObject.getJSONArray("consumerGroups");
+        List<String> alarmContents = new ArrayList<>();
         //如果不为空 就进行遍历
         if (consumerGroups != null && !consumerGroups.isEmpty()) {
             //开始遍历
@@ -75,6 +80,7 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
                 String groupId = data.getString("groupId");
                 //获取每个 消费组 对应的Topic数组
                 JSONArray topicOffsets = data.getJSONArray("topicOffsets");
+                List<String> alarmTopics = new ArrayList<>();
                 //如果 topicOffsets 数组不为空
                 if (topicOffsets != null && !topicOffsets.isEmpty()) {
                     //遍历 topicOffsets
@@ -99,30 +105,78 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
                                 //数据的计算时间
                                 consumerGroupInfo.setCreateTime(new Date());
                                 //判断数据 是否配置 并且大于阈值
-                                checkAndSendAlarm(consumerGroupInfo, allTopicConfig, allGroupConfig, ratio);
+                                checkAndSendAlarm(consumerGroupInfo, allTopicConfig, allGroupConfig, ratio, alarmTopics);
                                 //插入数据表
                                 kafkaGroupTopicMapper.insert(consumerGroupInfo);
                             } catch (Exception e) {
                                 log.error("INVALID DATA:", e);
                             }
                         }
+                    }
 
+                    if (!alarmTopics.isEmpty()) {
+                        StringJoiner stringJoiner = new StringJoiner("],[", "[", "]");
+                        for (String alarmTopic : alarmTopics) {
+                            stringJoiner.add(alarmTopic);
+                        }
+                        String sb = String.format("[%s]用户组下: %s超过阈值!", groupId, stringJoiner);
+                        alarmContents.add(sb);
                     }
                 }
             }
+            //发送一条预警
+            if (!alarmContents.isEmpty()) {
+                StringJoiner stringJoiner = new StringJoiner("\r\n");
+                for (String alarmTopic : alarmContents) {
+                    stringJoiner.add(alarmTopic);
+                }
+                String sb = String.format("一体化监控平台告警：\r\n%s", stringJoiner);
+                saveAlertData(alertDataIdList, dimCommAcqRule, sb, System.currentTimeMillis());
+                generalAlarmMsgTask.toSendAlertData(alertDataIdList);
+                log.info("发送数据成功");
+                XxlJobLogger.log("发送数据成功");
+            }
         }
+        //return ReturnT.SUCCESS;
     }
 
     /**
-     * 校验数据
-     * 是否为 配置中的 group 和 topic
-     * 如果是 则 判断 lag/count的值 是否大于 阈值
-     * 如果大于 则 发送预警
+     * 获取短信配置
      */
+    private DimCommAcqRule getDimCommAcqRule(Long sysId, Long ruleTypeId) {
+        DimCommAcqRule query = new DimCommAcqRule();
+        query.setSysId(sysId);
+        query.setState(1L);
+        query.setRuleTypeId(ruleTypeId);
+        List<DimCommAcqRule> dimCommAcqRules = dimCommAcqRuleService.selectDimCommAcqRuleList(query);
+        if (CollectionUtil.isEmpty(dimCommAcqRules)) {
+            return null;
+        }
+        return dimCommAcqRules.get(0);
+    }
+
+    /**
+     * 持久化预警数据 到表里面
+     */
+    public void saveAlertData(List<Long> alertDataIdList, DimCommAcqRule temp, String sb, Long uniqueId) {
+        DimSendRule sendRule = sendRuleService.selectDimSendRuleBySendRuleId(temp.getSendRuleId());
+        DimAlertData dimAlertData = new DimAlertData();
+        dimAlertData.setRuleId(temp.getRuleId());
+        dimAlertData.setSendRuleId(temp.getSendRuleId());
+        dimAlertData.setSendMode(sendRule.getSendMode());
+        dimAlertData.setContent(sb);
+        dimAlertData.setSendFlag(1L);
+        dimAlertData.setDataCreateTime(new Date());
+        //标记位，确定关联通知的唯一性
+        dimAlertData.setTag(uniqueId);
+        alertDataService.insertDimAlertData(dimAlertData);
+        alertDataIdList.add(dimAlertData.getDataId());
+    }
     private void checkAndSendAlarm(KafkaGroupTopic consumerGroupInfo,
                                    Set<String> allTopicConfig,
                                    Set<String> allGroupConfig,
-                                   Double ratio) {
+                                   Double ratio,
+                                   List<String> alarmTopics) {
         try {
             //先校验consumerGroupInfo 数据是否正常
             if (null != consumerGroupInfo.getGroupName()
@@ -144,8 +198,8 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
                 consumerGroupInfo.setLagRatio(lagRatio);
                 //大于阈值 发送预警
                 if (lagRatio > ratio) {
-                    //TODO 发送预警还没写
-
+                    //预警Topic
+                    alarmTopics.add(consumerGroupInfo.getTopicName());
                     consumerGroupInfo.setSendAlarmFlag(true);
                 } else {
                     consumerGroupInfo.setSendAlarmFlag(false);
@@ -224,6 +278,7 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
     public Integer getKafkaTopicCountData(String topicName) {
         OkHttpClient client = new OkHttpClient();
         //TODO 需要换成真实接口
+        //String url = String.format("http://10.1.183.36:3004/api/topics/%s/partitions ", topicName);
         String url = String.format("http://127.0.0.1:9998/mock/topicData?topicName=%s", topicName);
         Request request = new Request.Builder()
                 .url(url)

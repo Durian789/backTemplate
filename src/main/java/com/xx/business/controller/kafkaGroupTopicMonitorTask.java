@@ -37,7 +37,7 @@ public class kafkaGroupTopicMonitorTask {
 
     @RequestMapping("/test/consumerGroupLagCount")
     public String consumerGrouplagCount() {
-        topicGroupMonitorService.kafkaGroupTopic();
+        topicGroupMonitorService.kafkaGroupTopic("0.11");
         return "OK";
     }
 
