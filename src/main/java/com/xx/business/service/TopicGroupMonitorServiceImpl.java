@@ -3,9 +3,11 @@ package com.xx.business.service;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.xx.business.entity.KafkaBatchGroupTopicConfig;
 import com.xx.business.entity.KafkaGroupConfig;
 import com.xx.business.entity.KafkaGroupTopic;
 import com.xx.business.entity.KafkaTopicConfig;
+import com.xx.business.mapper.KafkaBatchGroupTopicConfigMapper;
 import com.xx.business.mapper.KafkaGroupConfigMapper;
 import com.xx.business.mapper.KafkaGroupTopicMapper;
 import com.xx.business.mapper.KafkaTopicConfigMapper;
@@ -20,6 +22,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;
+import java.util.regex.Pattern;
 
 @Service
 @Slf4j
@@ -31,26 +34,18 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
     private KafkaGroupConfigMapper kafkaGroupConfigMapper;
     @Autowired
     private KafkaTopicConfigMapper kafkaTopicConfigMapper;
-
     @Autowired
-    private IDimCommAcqRuleService dimCommAcqRuleService;
-    @Autowired
-    private IDimSendRuleService sendRuleService;
-    @Autowired
-    private IDimAlertDataService alertDataService;
-    @Autowired
-    private GeneralAlarmMsgTask generalAlarmMsgTask;
+    private KafkaBatchGroupTopicConfigMapper kafkaBatchGroupTopicConfigMapper;
 
     @Override
     public void kafkaGroupTopic(String s) {
 
         //下面的 1L 1L 就是随便写的 TODO 类似 DWD_GN_GP_CHECK_DATA_EMAIL_HILINK.getSysId(), DWD_GN_GP_CHECK_DATA_EMAIL_HILINK.getRuleTypeId()
-        DimCommAcqRule dimCommAcqRule = getDimCommAcqRule(4L, 1L);
+        //DimCommAcqRule dimCommAcqRule = getDimCommAcqRule(4L, 1L);
         //需要发送预警的ID
         List<Long> alertDataIdList = new ArrayList<>();
         //去数据库 获取 group和topic的配置信息
-        Set<String> allTopicConfig = getAllTopicConfig();
-        Set<String> allGroupConfig = getAllGroupConfig();
+        Map<String, KafkaBatchGroupTopicConfig> allGroupConfig = getAllGroupTopicConfig();
         //lag/topicCount 的阈值
         Double ratio = 0.5D;
         try {
@@ -78,6 +73,11 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
                 JSONObject data = consumerGroups.getJSONObject(i);
                 //获取到 groupId
                 String groupId = data.getString("groupId");
+                KafkaBatchGroupTopicConfig kafkaBatchGroupTopicConfig = allGroupConfig.get(groupId);
+                //如果配置不包含GROUP 则不执行监控
+                if (null == kafkaBatchGroupTopicConfig) {
+                    continue;
+                }
                 //获取每个 消费组 对应的Topic数组
                 JSONArray topicOffsets = data.getJSONArray("topicOffsets");
                 List<String> alarmTopics = new ArrayList<>();
@@ -89,12 +89,16 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
                         //如果topic数据不为空
                         if (null != topic) {
                             try {
+                                String topicName = topic.getString("topic");
+                                //如果topicName没有配置则不需要监控
+                                if (!kafkaBatchGroupTopicConfig.checkTopic(topicName)) {
+                                    continue;
+                                }
                                 //创建KafkaGroupTopic对象 用于记录 group 和 topic的关系对象 并写入数据库
                                 KafkaGroupTopic consumerGroupInfo = new KafkaGroupTopic();
                                 //赋值 groupName
                                 consumerGroupInfo.setGroupName(groupId);
                                 //获取topic名称
-                                String topicName = topic.getString("topic");
                                 consumerGroupInfo.setTopicName(topicName);
                                 //TODO 根据topicName 获取 topic总量
                                 Integer topicCount = getKafkaTopicCountData(topicName);
@@ -105,7 +109,7 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
                                 //数据的计算时间
                                 consumerGroupInfo.setCreateTime(new Date());
                                 //判断数据 是否配置 并且大于阈值
-                                checkAndSendAlarm(consumerGroupInfo, allTopicConfig, allGroupConfig, ratio, alarmTopics);
+                                checkAndSendAlarm(consumerGroupInfo, ratio, alarmTopics);
                                 //插入数据表
                                 kafkaGroupTopicMapper.insert(consumerGroupInfo);
                             } catch (Exception e) {
@@ -131,10 +135,10 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
                     stringJoiner.add(alarmTopic);
                 }
                 String sb = String.format("一体化监控平台告警：\r\n%s", stringJoiner);
-                saveAlertData(alertDataIdList, dimCommAcqRule, sb, System.currentTimeMillis());
+                /*saveAlertData(alertDataIdList, dimCommAcqRule, sb, System.currentTimeMillis());
                 generalAlarmMsgTask.toSendAlertData(alertDataIdList);
                 log.info("发送数据成功");
-                XxlJobLogger.log("发送数据成功");
+                XxlJobLogger.log("发送数据成功");*/
             }
         }
         //return ReturnT.SUCCESS;
@@ -143,7 +147,7 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
     /**
      * 获取短信配置
      */
-    private DimCommAcqRule getDimCommAcqRule(Long sysId, Long ruleTypeId) {
+    /*private DimCommAcqRule getDimCommAcqRule(Long sysId, Long ruleTypeId) {
         DimCommAcqRule query = new DimCommAcqRule();
         query.setSysId(sysId);
         query.setState(1L);
@@ -153,12 +157,12 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
             return null;
         }
         return dimCommAcqRules.get(0);
-    }
+    }*/
 
     /**
      * 持久化预警数据 到表里面
      */
-    public void saveAlertData(List<Long> alertDataIdList, DimCommAcqRule temp, String sb, Long uniqueId) {
+    /*public void saveAlertData(List<Long> alertDataIdList, DimCommAcqRule temp, String sb, Long uniqueId) {
         DimSendRule sendRule = sendRuleService.selectDimSendRuleBySendRuleId(temp.getSendRuleId());
         DimAlertData dimAlertData = new DimAlertData();
         dimAlertData.setRuleId(temp.getRuleId());
@@ -171,10 +175,8 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
         dimAlertData.setTag(uniqueId);
         alertDataService.insertDimAlertData(dimAlertData);
         alertDataIdList.add(dimAlertData.getDataId());
-    }
+    }*/
     private void checkAndSendAlarm(KafkaGroupTopic consumerGroupInfo,
-                                   Set<String> allTopicConfig,
-                                   Set<String> allGroupConfig,
                                    Double ratio,
                                    List<String> alarmTopics) {
         try {
@@ -184,11 +186,7 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
                     && null != consumerGroupInfo.getLagCount()
                     && 0 < consumerGroupInfo.getLagCount()
                     && null != consumerGroupInfo.getTopicCount()
-                    && 0 < consumerGroupInfo.getTopicCount()
-                    //校验group是否配置
-                    && allGroupConfig.contains(consumerGroupInfo.getGroupName())
-                    //检查topic是否配置
-                    && allTopicConfig.contains(consumerGroupInfo.getTopicName())) {
+                    && 0 < consumerGroupInfo.getTopicCount()) {
                 //进行计算 lag/topicCount
                 BigDecimal bdA = new BigDecimal(consumerGroupInfo.getLagCount());
                 BigDecimal bdB = new BigDecimal(consumerGroupInfo.getTopicCount());
@@ -246,6 +244,45 @@ public class TopicGroupMonitorServiceImpl implements TopicGroupMonitorService {
         }
         //最后获取到 kafka_topic_config 这张表里面 flag为true的所有 topicName
         return topicNames;
+    }
+
+    /**
+     * 查询 group和topic的配置信息
+     */
+    private Map<String, KafkaBatchGroupTopicConfig> getAllGroupTopicConfig() {
+        QueryWrapper<KafkaBatchGroupTopicConfig> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("flag", true);
+        List<KafkaBatchGroupTopicConfig> kafkaTopicConfigs = kafkaBatchGroupTopicConfigMapper
+                .selectList(queryWrapper);
+        //topicName 的去重集合
+        Map<String, KafkaBatchGroupTopicConfig> groupTopicMap = new HashMap<>();
+        if (null != kafkaTopicConfigs && !kafkaTopicConfigs.isEmpty()) {
+            for (KafkaBatchGroupTopicConfig kafkaTopicConfig : kafkaTopicConfigs) {
+                if (kafkaTopicConfig.getGroupName() != null
+                        && !kafkaTopicConfig.getGroupName().isEmpty()) {
+                    Set<String> equalsTopics = new HashSet<>();
+                    Set<Pattern> fuzzyTopics = new HashSet<>();
+                    kafkaTopicConfig.setEqualsTopics(equalsTopics);
+                    kafkaTopicConfig.setFuzzyMatchTopics(fuzzyTopics);
+                    if (kafkaTopicConfig.getTopicRule() != null
+                            && !kafkaTopicConfig.getTopicRule().isEmpty()) {
+                        for (String s : kafkaTopicConfig.getTopicRule().split(",")) {
+                            if (s.contains("*")) {
+                                String s1 = s.replace("*", ".*");
+                                Pattern compile = Pattern.compile(s1);
+                                fuzzyTopics.add(compile);
+                            } else if (!s.isEmpty()) {
+                                equalsTopics.add(s);
+                            }
+                        }
+                    }
+                    groupTopicMap.put(kafkaTopicConfig.getGroupName(), kafkaTopicConfig);
+                }
+
+            }
+        }
+        //最后获取到 kafka_topic_config 这张表里面 flag为true的所有 topicName
+        return groupTopicMap;
     }
 
     /**
